@@ -1,0 +1,308 @@
+/* ---------- Colors taken from the NaCakes logo ---------- */
+:root {
+  --orange: #f28c28;     /* the swirl in the logo */
+  --orange-dark: #d9741a;
+  --charcoal: #2f3542;   /* the dark letters */
+  --soft: #fff4e6;       /* light peach */
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--soft);
+}
+
+/* ---------- Top strip ---------- */
+.top-strip {
+  background: var(--charcoal);
+  color: var(--white);
+  font-size: 13px;
+  text-align: right;
+  padding: 6px 30px;
+}
+
+.top-strip span + span {
+  margin-left: 18px;
+  padding-left: 18px;
+  border-left: 2px solid var(--orange);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 30px;
+  background: var(--white);
+  border-bottom: 5px solid var(--orange);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Logo image (left corner) ---------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+  background: var(--white);
+}
+
+.tagline {
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+/* ---------- Links ---------- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  color: var(--charcoal);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 30px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--soft);
+  color: var(--orange-dark);
+}
+
+/* Contact button */
+.nav-links .contact-btn {
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 4px 0 var(--orange-dark);
+}
+
+.nav-links .contact-btn:hover {
+  background: var(--charcoal);
+  color: var(--white);
+  box-shadow: 0 4px 0 #000;
+}
+
+/* ---------- Dropdown ---------- */
+.dropdown {
+  position: relative;
+}
+
+/* invisible bridge so the menu doesn't vanish when moving the mouse down */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px;
+}
+
+.dropdown-menu {
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 200px;
+  padding: 8px;
+  background: var(--white);
+  border-radius: 16px;
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  border-radius: 10px;
+}
+
+.dropdown-menu a:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 700px) {
+  .top-strip {
+    text-align: center;
+    padding: 6px 10px;
+  }
+
+  .navbar {
+    justify-content: center;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 7px 12px;
+  }
+
+  .tagline {
+    font-size: 20px;
+  }
+}
+
+/* =====================================================
+   HOME + ABOUT PAGE STYLES
+   ===================================================== */
+html { scroll-behavior: smooth; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 40px;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn-orange { background: var(--orange); color: var(--white); box-shadow: 0 5px 0 var(--orange-dark); }
+.btn-light  { background: var(--white); color: var(--charcoal); }
+
+/* ---------- Hero (home) ---------- */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 8%;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(47,53,66,0.88) 30%, rgba(47,53,66,0.25)),
+    url("images/waakye.jpg") center/cover no-repeat var(--charcoal);
+}
+.hero-content { max-width: 600px; }
+.hero-small { font-family: "Dancing Script", cursive; font-size: 30px; color: var(--orange); }
+.hero h1 { font-size: 56px; line-height: 1.15; margin: 8px 0 16px; }
+.hero h1 span { color: var(--orange); font-family: "Dancing Script", cursive; font-size: 1.2em; }
+.hero-text { font-size: 18px; line-height: 1.7; margin-bottom: 28px; }
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+
+/* ---------- Sections ---------- */
+.section { padding: 80px 8%; text-align: center; }
+.section-peach { background: var(--white); }
+.section-small { font-family: "Dancing Script", cursive; font-size: 28px; color: var(--orange-dark); }
+.section-title { font-size: 36px; color: var(--charcoal); margin-bottom: 40px; }
+.section-title.left { margin-bottom: 18px; }
+
+/* ---------- Cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: var(--white);
+  border-radius: 22px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-8px); }
+.card img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--orange); }
+.card-body { padding: 22px; }
+.card-body h3 { color: var(--charcoal); margin-bottom: 8px; }
+.card-body p { color: #5b6270; line-height: 1.6; margin-bottom: 14px; }
+.card-link { color: var(--orange-dark); font-weight: 600; text-decoration: none; }
+
+/* ---------- Features ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.feature { background: var(--soft); padding: 30px 20px; border-radius: 22px; }
+.feature span { font-size: 46px; }
+.feature h3 { margin: 10px 0 6px; color: var(--charcoal); }
+.feature p { color: #5b6270; line-height: 1.6; }
+
+/* ---------- Call to action ---------- */
+.cta { background: var(--orange); color: var(--white); text-align: center; padding: 70px 8%; }
+.cta h2 { font-size: 34px; margin-bottom: 8px; }
+.cta p { margin-bottom: 24px; font-size: 18px; }
+
+/* ---------- About section ---------- */
+.split { display: flex; align-items: center; gap: 50px; text-align: left; }
+.split-img {
+  width: 50%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 6px solid var(--white);
+  box-shadow: 14px 14px 0 var(--orange);
+  background: var(--orange);
+}
+.split-text { width: 50%; }
+.split-text p { color: #5b6270; line-height: 1.8; margin-bottom: 16px; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--charcoal);
+  color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 50px 8% 20px;
+}
+.footer h3 { font-family: "Dancing Script", cursive; font-size: 34px; color: var(--orange); }
+.footer h4 { color: var(--orange); margin-bottom: 10px; }
+.footer p { margin-bottom: 6px; }
+.footer a { color: var(--white); text-decoration: none; }
+.footer a:hover { color: var(--orange); }
+.copyright { width: 100%; text-align: center; font-size: 13px; opacity: 0.7; border-top: 1px solid #4a5163; padding-top: 16px; }
+
+/* ---------- Phones ---------- */
+@media (max-width: 700px) {
+  .hero h1 { font-size: 38px; }
+  .section { padding: 55px 6%; }
+  .section-title { font-size: 28px; }
+  .split { flex-direction: column; }
+  .split-img, .split-text { width: 100%; }
+  .split-img { height: 300px; }
+}

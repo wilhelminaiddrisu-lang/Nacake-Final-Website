@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaCakes | a unique taste of joy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Thin strip at the very top with the phone numbers -->
+  <div class="top-strip">
+    <span>Call us: 027 616 9735</span>
+    <span>024 367 3947</span>
+    <span>+1(437) 318-2275</span>
+  </div>
+
+  <nav class="navbar">
+
+    <!-- LOGO IMAGE: save your mum's logo in this folder as logo.png -->
+    <a href="#home" class="brand">
+      <img src="./nacakes logo.png" alt="NaCakes logo" class="logo-img">
+      <span class="tagline">a unique taste of joy</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+
+      <li class="dropdown">
+        <a href="#menu" class="dropdown-toggle">Menu &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="#local-dishes">Local Dishes</a></li>
+          <li><a href="#pastries">Pastries</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#contact" class="contact-btn">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <!-- IMAGE 1: images/hero.jpg -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-small">Welcome to NaCakes</p>
+      <h1>A unique taste of <span>joy</span></h1>
+      <p class="hero-text">Fresh local dishes, golden pastries and beautiful cakes, made with love and ready for you to book.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-orange">Book Now</a>
+        <a href="#menu" class="btn btn-light">See Our Menu</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= ABOUT ================= -->
+  <!-- IMAGE 2: images/about-mum.jpg -->
+  <section class="section split" id="about">
+    <img src="images/mum cake.jpg" alt="The baker at NaCakes" class="split-img">
+    <div class="split-text">
+      <p class="section-small">About us</p>
+      <h2 class="section-title left">Cooking With Love</h2>
+      <p>NaCakes started in a kitchen full of warm smells and big smiles. Every dish and every pastry is made with care, using fresh ingredients and recipes that taste like home.</p>
+      <p>We make local dishes, pastries and cakes for families, parties and anyone who wants a unique taste of joy.</p>
+      <a href="#contact" class="btn btn-orange">Book Now</a>
+    </div>
+  </section>
+
+  <!-- ================= MENU CARDS ================= -->
+  <section class="section" id="menu">
+    <p class="section-small">What we make</p>
+    <h2 class="section-title">Our Delicious Menu</h2>
+
+    <div class="cards">
+      <!-- IMAGE 3: images/dishes.jpg -->
+      <article class="card" id="local-dishes">
+        <img src="images/Jollof.jpg" alt="Ghanaian local dishes">
+        <div class="card-body">
+          <h3>Local Dishes</h3>
+          <p>Jollof, waakye, fried rice and more, cooked the way home tastes.</p>
+          <a href="#contact" class="card-link">Order now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- IMAGE 4: images/pastries.jpg -->
+      <article class="card" id="pastries">
+        <img src="images/Pastries.png" alt="Meat pies and pastries">
+        <div class="card-body">
+          <h3>Pastries</h3>
+          <p>Meat pies, doughnuts, cupcakes and snacks, baked fresh every day.</p>
+          <a href="#contact" class="card-link">Order now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- IMAGE 5: images/cakes.jpg -->
+      <article class="card">
+        <img src="images/cake.jpg" alt="Celebration cakes">
+        <div class="card-body">
+          <h3>Celebration Cakes</h3>
+          <p>Birthdays, weddings and parties, a cake for every happy moment.</p>
+          <a href="#contact" class="card-link">Order now &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= WHY US ================= -->
+  <section class="section section-peach">
+    <p class="section-small">Why NaCakes?</p>
+    <h2 class="section-title">Made Fresh, Made With Love</h2>
+    <div class="features">
+      <div class="feature"><span>&#127858;</span><h3>Fresh Daily</h3><p>Everything is made on the day you need it.</p></div>
+      <div class="feature"><span>&#127856;</span><h3>Made For You</h3><p>Tell us what you want and we bake it.</p></div>
+      <div class="feature"><span>&#128222;</span><h3>Easy Booking</h3><p>Call us and your order is on the way.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= CALL TO ACTION ================= -->
+  <section class="cta">
+    <h2>Hungry? Let's get cooking!</h2>
+    <p>Book your food, pastries or cake today.</p>
+    <a href="#contact" class="btn btn-light">Call to Book</a>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="footer-box">
+      <h3>NaCakes</h3>
+      <p>a unique taste of joy</p>
+    </div>
+    <div class="footer-box">
+      <h4>Order &amp; Book</h4>
+      <p>027 616 9735</p>
+      <p>024 367 3947</p>
+      <p>+1 (437) 318-2275</p>
+    </div>
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <p><a href="#home">Home</a></p>
+      <p><a href="#about">About</a></p>
+      <p><a href="#menu">Menu</a></p>
+    </div>
+    <p class="copyright">&copy; 2026 NaCakes. Made with love by a proud son/daughter.</p>
+  </footer>
+    
+</body>
+</html>
